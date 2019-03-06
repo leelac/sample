@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.header img{
+	height: 50px;
+}
+
+.header .header-text{
+	font-size: 20px;
+	color: black;
+	float: right;
+	padding-top: 10px;
+	padding-right: 100px;
+	text-align: center;
+}
+
+.logout{
+	color: black;
+	font-size: 15px;
+	padding-left: 20px;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  padding: 20px;
+  border-right: 3px solid #f4f4f4;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  height: 800px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li{
+  padding: 8px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 85%;
+  height: 80%; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.logout a:hover {
+  text-decoration: underline;
+}
+
+.top-body, .employee-feedback .reports-section .reports-graph{
+    margin: 2px 0px;
+    padding: 40px;
+}
+
+.employee-feedback{
+    margin: 2px 0px;
+    padding-left: 40px;
+	padding-top: 5px;
+}
+
+.employee-feedback .top-section{
+	float: left;
+	padding-left: 40px;
+	width: 190px;
+}
+
+.top-section .count-section{
+	line-height: 50px;
+	border: #bdbdbd 1px solid;
+    border-radius: 4px;
+	height: 100px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.top-section .count-section p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.employee-feedback .total-employees{
+	float: left;
+	padding-left: 0px;
+	width: 150px;
+}
+
+.demoInputBox {
+    padding: 10px;
+    border: #bdbdbd 1px solid;
+    border-radius: 4px;
+    background-color: #FFF;   
+}
+
+.row {
+    padding-bottom: 15px;
+	padding-right: 10px;
+}
+
+.row select{
+    width: 150px;
+}
+
+.line-divider{
+	border: #bdbdbd 1px solid;
+    border-radius: 4px;
+	margin-top: 150px;
+	width: 60%;
+}
+
+.reports-section{
+	margin-top: 30px;
+	padding-left: 40px;
+}
+
+.reports-graph{
+	margin-top: 30px;
+	padding-left: 40px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+	<span>
+		<img src="C:\\Users\\310077\\Desktop\\HackFSE\\logo-transperant.png" alt="Cognizant Outreach">
+	</span>  
+	<span class="header-text">
+		Hi Mrs. Leela
+		<span class="logout">
+			<a href="#" title="logout">Log out</a>
+		</span>
+	</span>
+</div>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Upload data</a></li>
+      <li><a href="#">Events</a></li>
+	  <li><a href="#">Employee events</a></li>
+	  <li><a href="#">Update feedback</a></li>
+	  <li><a href="#">Configure roles</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <div class="top-body">
+        <span class="row">
+            <label>Country:</label>
+			<select name="country" class="demoInputBox">
+                <option value disabled selected>Select Country</option>                
+            </select>
+        </span>
+        <span class="row">
+            <label>State:</label>
+			<select name="state" class="demoInputBox">
+                <option value="">Select State</option>
+            </select>
+        </span>
+		<span class="row">
+            <label>City:</label>
+			<select name="city" class="demoInputBox">
+                <option value="">Select City</option>
+            </select>
+        </span>
+        <span class="row">
+            <label>Event:</label>
+			<select name="event" class="demoInputBox">
+                <option value="">Select Event</option>
+            </select>
+        </span>
+    </div>
+	<div class="employee-feedback">
+		<div class="top-section total-employees">
+			<label>Total employess</label>
+			<div class="count-section">
+				<p>40</p>
+			</div>
+		</div>
+		<div class="top-section">
+			<label>Feedback provided</label>
+			<div class="count-section">
+				<p>30</p>
+			</div>
+		</div>
+		<div class="top-section">
+			<label>Average</label>
+			<div class="count-section">
+				<p>4</p>
+			</div>
+		</div>
+	</div>
+	<div class="line-divider"></div>
+	<div class="reports-section">
+        <span class="row">
+            <label>Project:</label>
+			<select name="country" class="demoInputBox">
+                <option value disabled selected>Select Project</option>                
+            </select>
+        </span>
+        <span class="row">
+            <label>Start date:</label>
+			<select name="state" class="demoInputBox">
+                <option value="">Select start date</option>
+            </select>
+        </span>
+		<span class="row">
+            <label>End date:</label>
+			<select name="city" class="demoInputBox">
+                <option value="">Select end date</option>
+            </select>
+        </span>       
+    </div>
+	<div class="reports-section">
+        <span class="row">
+            <label><b>Country:</b></label>
+			<span> India</span>
+        </span>
+        <span class="row">
+            <label><b>State:</b></label>
+			<span> Tamilnadu</span>
+        </span>
+		<span class="row">
+            <label><b>City:</b></label>
+			<span> Chennai</span>
+        </span>       
+    </div>
+	<div class="reports-graph">
+		<span>
+			<img src="C:\\Users\\310077\\Desktop\\HackFSE\\graph.jpg" alt="graph">
+		</span> 
+	</div>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
